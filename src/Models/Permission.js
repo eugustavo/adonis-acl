@@ -18,7 +18,7 @@ class Permission extends Model {
   }
 
   users () {
-    return this.belongsToMany('App/Models/User').pivotTable('users_permissions')
+    return this.belongsToMany('App/Models/User').pivotTable('users_permissions').withTimestamps()
   }
 }
 

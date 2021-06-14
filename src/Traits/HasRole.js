@@ -12,7 +12,7 @@ const Acl = require('../Acl')
 module.exports = class HasRole {
   register (Model) {
     Model.prototype.roles = function () {
-      return this.belongsToMany('Adonis/Acl/Role').pivotTable('users_roles')
+      return this.belongsToMany('Adonis/Acl/Role').pivotTable('users_roles').withTimestamps()
     }
 
     Model.prototype.getRoles = async function () {

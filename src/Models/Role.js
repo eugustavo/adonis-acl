@@ -18,7 +18,7 @@ class Role extends Model {
   }
 
   permissions () {
-    return this.belongsToMany('Adonis/Acl/Permission').pivotTable('roles_permissions')
+    return this.belongsToMany('Adonis/Acl/Permission').pivotTable('roles_permissions').withTimestamps()
   }
 
   async getPermissions () {
